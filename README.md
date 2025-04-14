@@ -1,11 +1,11 @@
-[Link Colab](https://colab.research.google.com/drive/1GLlEQ04ULiJP03Pbo7jCFcIvR9kDuz-4?usp=sharing)
 # Agent_RAG
 
 ## Giới thiệu
 
 Agent_RAG là một demo xây dựng hệ thống Retrieval-Augmented Generation (RAG) agent đơn giản, kết hợp sức mạnh của LangGraph, LangChain, và một công cụ tìm kiếm bên ngoài (DuckDuckGoSearch) để cải thiện khả năng trả lời câu hỏi từ người dùng.
 
-Code được thực hiện bằng Jupyter Notebook, cho mục đích học tập, thử nghiệm nhanh.
+Code được thực hiện bằng Jupyter Notebook, cho mục đích học tập, thử nghiệm nhanh. 
+[Link Colab](https://colab.research.google.com/drive/1GLlEQ04ULiJP03Pbo7jCFcIvR9kDuz-4?usp=sharing)
 
 ## Cấu trúc notebook
 **Notebook bao gồm 4 phần chính:**
