@@ -1,4 +1,4 @@
-# Agent_RAG
+# Retrieval-Augmented-Generation (RAG)
 
 ## Introduction
 
