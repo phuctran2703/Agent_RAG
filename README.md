@@ -1,28 +1,30 @@
 # Agent_RAG
 
-## Giới thiệu
+## Introduction
 
-Agent_RAG là một demo xây dựng hệ thống Retrieval-Augmented Generation (RAG) agent đơn giản, kết hợp sức mạnh của LangGraph, LangChain, và một công cụ tìm kiếm bên ngoài (DuckDuckGoSearch) để cải thiện khả năng trả lời câu hỏi từ người dùng.
+Agent_RAG is a demo project that builds a simple Retrieval-Augmented Generation (RAG) agent, combining the power of **LangGraph**, **LangChain**, and an external search tool (**DuckDuckGoSearch**) to enhance the agent’s ability to answer user queries.
 
-Code được thực hiện bằng Jupyter Notebook, cho mục đích học tập, thử nghiệm nhanh. 
-[Link Colab](https://colab.research.google.com/drive/1GLlEQ04ULiJP03Pbo7jCFcIvR9kDuz-4?usp=sharing)
+The code is implemented in a Jupyter Notebook for educational purposes and quick experimentation.  
+[Colab Link](https://colab.research.google.com/drive/1GLlEQ04ULiJP03Pbo7jCFcIvR9kDuz-4?usp=sharing)
 
-## Cấu trúc notebook
-**Notebook bao gồm 4 phần chính:**
-### Tạo vector embedding từ dữ liệu
-- Sử dụng model embedding sentence-transformers/all-mpnet-base-v2 để mã hóa nội dung pdf thành vector embedding.
-- Các vector này được lưu trữ trong vector store Chroma để thực hiện tìm kiếm ngữ nghĩa.
+## Notebook Structure
 
-### Xây dựng RAG với LangGraph
-- Sử dụng langgraph để thiết kế một đồ thị xử lý đơn giản cho tác vụ RAG.
-- Ánh xạ luồng dữ liệu giữa các bước như: truy xuất tài liệu → tạo prompt → sinh câu trả lời.
-- Giúp hình dung luồng xử lý rõ ràng hơn, dễ dàng kiểm soát các thành phần.
+**The notebook consists of 4 main parts:**
 
-### Tạo Agent tích hợp tìm kiếm (DuckDuckGo) bằng LangChain
-- Xây dựng một RAG Agent với langchain.agents có thể tìm kiếm dữ liệu bên ngoài (real-time).
-- Tích hợp DuckDuckGoSearch để tìm kiếm dữ liệu trên web.
-- Agent tự động quyết định khi nào cần sử dụng công cụ tìm kiếm và tổng hợp câu trả lời.
+### Creating vector embeddings from data
+- Uses the embedding model `sentence-transformers/all-mpnet-base-v2` to encode PDF content into vector embeddings.
+- These vectors are stored in a **Chroma vector store** for semantic search purposes.
 
-### Đánh giá chất lượng trả lời
-- Dùng bộ dữ liệu từ {Kaggle - Question-Answer Dataset}[https://www.kaggle.com/datasets/rtatman/questionanswer-dataset].
-- Thực hiện thủ công các tiêu chí đánh giá agent model.
+### Building RAG with LangGraph
+- Utilizes **LangGraph** to design a simple processing graph for the RAG task.
+- Maps the data flow between steps such as: retrieving documents → generating prompt → producing answers.
+- Helps visualize the processing pipeline clearly and makes components easier to manage.
+
+### Creating a search-augmented Agent (DuckDuckGo) using LangChain
+- Builds a **RAG Agent** using `langchain.agents` that can perform real-time external searches.
+- Integrates **DuckDuckGoSearch** to fetch data from the web.
+- The agent automatically decides when to use the search tool and how to synthesize the final response.
+
+### Evaluating response quality
+- Uses the dataset from [Kaggle - Question-Answer Dataset](https://www.kaggle.com/datasets/rtatman/questionanswer-dataset).
+- Performs manual evaluation of the agent model's answers based on predefined criteria.
