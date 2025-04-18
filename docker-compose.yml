@@ -6,6 +6,6 @@ services:
     volumes:
       - ./:/app
     environment:
-      - LANGSMITH_API_KEY=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
-      - TAVILY_API_KEY=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
-      - GROQ_API_KEY=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
+      - LANGSMITH_API_KEY=<YOUR_API>
+      - TAVILY_API_KEY=<YOUR_API>
+      - GROQ_API_KEY=<YOUR_API>
